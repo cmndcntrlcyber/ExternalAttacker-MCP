@@ -71,7 +71,7 @@ async def scan_subdomains(target: str, domain_file: bool, threads: int = 4):
     return run_command(command)
 
 @mcp.tool()
-async def scan_ports(target: str, file: bool, ports: str = "80,443", top_ports: bool = False, threads: int = 20):
+async def scan_ports(target: str, file: bool, ports: str = "1-65535", top_ports: bool = False, threads: int = 20):
     """
     Scan a target domain for open ports using naabu binary
     
